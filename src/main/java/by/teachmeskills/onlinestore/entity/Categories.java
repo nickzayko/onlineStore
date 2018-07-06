@@ -1,7 +1,7 @@
 package by.teachmeskills.onlinestore.entity;
 
 public class Categories {
+    private int id;
+    private String categoryName;
     private int idSubcategory;
-    private String nameCategory;
-    private int idCategory;
 }

@@ -3,10 +3,13 @@ package by.teachmeskills.onlinestore.entity;
 import java.util.Date;
 
 public class Profile {
-    private int idProfile;
-    private int idUser;
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String email;
     private String sex;
+    private int telephoneNumber;
     private Date dateOfBirth;
-    private String userName;
-    private String userSurname;
+    private int idAddress;
+
 }
