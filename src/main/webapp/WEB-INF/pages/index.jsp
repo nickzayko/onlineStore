@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html lang="ru">
 
@@ -19,25 +19,6 @@
 </head>
 
 <body>
-
-<!--<div class="form-inline">-->
-<!--<form role="form" class="form-inline">-->
-<!--<div class="form-group">-->
-<!--<label for="name">Имя</label>-->
-<!--<input id="name" name="name" type="text" class="form-control" placeholder="Имя"/>-->
-<!--</div>-->
-<!--<div class="form-group">-->
-<!--<label for="email">E-mail</label>-->
-<!--<input id="email" name="email" type="email" class="form-control" placeholder="E-mail"/>-->
-<!--</div>-->
-<!--<div class="form-group">-->
-<!--<input type="submit" class="btn btn-info" value="Отправить"/>-->
-<!--</div>-->
-<!--</form>-->
-<!--<div class="form-inline">-->
-<!--<button class="btn btn-info">Reg</button>-->
-<!--</div>-->
-<!--</div>-->
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <!--<a class="navbar-brand" href="#">Online-</a>-->
@@ -59,9 +40,9 @@
         </ul>
 
         <div class="form-inline">
-            <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Login">
-                <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+            <form action="/authorization" class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Login" name="login">
+                <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
             </form>
             <div class="form-inline mt-2 mt-md-0">
