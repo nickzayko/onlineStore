@@ -1,6 +1,8 @@
 package by.teachmeskills.onlinestore.controllers;
 
+import by.teachmeskills.onlinestore.entity.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -8,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
     @RequestMapping("/")
-    public String main(){
+    public String main(Model model){
+        model.addAttribute("userEntity", new User());
+        model.addAttribute("result","");
         return "index";
     }
 }

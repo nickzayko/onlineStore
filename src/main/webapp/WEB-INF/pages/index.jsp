@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="springForm" uri="http://www.springframework.org/tags/form" %>
 
-<html lang="ru">
+<html lang="en">
 
 <head>
     <title>Start page</title>
@@ -39,18 +39,22 @@
             </li>
         </ul>
 
+        <%--@elvariable id="userEntity" type="by.teachmeskills.onlinestore.entity.User"--%>
         <div class="form-inline">
-            <form action="/authorization" class="form-inline mt-2 mt-md-0">
+            <springForm:form action="/authorization" method="post" commandName="userEntity" class="form-inline mt-2 mt-md-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Login" name="login">
                 <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
-            </form>
+            </springForm:form>
             <div class="form-inline mt-2 mt-md-0">
                 <button class="btn btn-outline-success">Registration</button>
             </div>
         </div>
     </div>
 </nav>
+
+
+
 
 <!--<main role="main" class="container">-->
 <!--<div class="jumbotron">-->
