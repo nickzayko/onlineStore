@@ -39,9 +39,10 @@
             </li>
         </ul>
 
-        <%--@elvariable id="userEntity" type="by.teachmeskills.onlinestore.entity.User"--%>
+      
         <div class="form-inline">
-            <springForm:form action="/authorization" method="post" commandName="userEntity" class="form-inline mt-2 mt-md-0">
+            <%--@elvariable id="userEntity" type="entity"--%>
+            <springForm:form action="/authorization" method="post"  class="form-inline mt-2 mt-md-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Login" name="login">
                 <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
