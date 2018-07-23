@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
     @RequestMapping("/")
     public String main(Model model){
-        model.addAttribute("userEntity", new User());
+        model.addAttribute("user", new User());
         model.addAttribute("result","");
         return "index";
     }

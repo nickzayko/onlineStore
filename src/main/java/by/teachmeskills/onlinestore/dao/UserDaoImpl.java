@@ -1,6 +1,7 @@
 package by.teachmeskills.onlinestore.dao;
 
 import by.teachmeskills.onlinestore.entity.User;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class UserDaoImpl {
 
 @Autowired
 public SessionFactory sessionFactory;
+
 
     public User getUserByLoginAndPassword(String login, String password) {
         try {

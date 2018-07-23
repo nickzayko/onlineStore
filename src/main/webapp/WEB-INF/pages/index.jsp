@@ -1,6 +1,9 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>--%>
+<%--<%@ taglib prefix="springForm" uri="http://www.springframework.org/tags/form" %>--%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="springForm" uri="http://www.springframework.org/tags/form" %>
-
 <html lang="en">
 
 <head>
@@ -39,13 +42,16 @@
             </li>
         </ul>
 
-      
+
         <div class="form-inline">
-            <%--@elvariable id="userEntity" type="entity"--%>
-            <springForm:form action="/authorization" method="post"  class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Login" name="login">
-                <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
+            <%--@elvariable id="user" type="by.teachmeskills.onlinestore.entity.User"--%>
+            <springForm:form action="/authorization" method="post" modelAttribute="user"
+                             class="form-inline mt-2 mt-md-0">
+                <springForm:input path="login" class="form-control mr-sm-2" type="text" placeholder="Login"
+                                  aria-label="Login"/>
+                <springForm:input path="password" class="form-control mr-sm-2" type="password" placeholder="Password"
+                                  aria-label="Password"/>
+                <springForm:button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</springForm:button>
             </springForm:form>
             <div class="form-inline mt-2 mt-md-0">
                 <button class="btn btn-outline-success">Registration</button>
@@ -55,15 +61,10 @@
 </nav>
 
 
+<div class="container">
+    ${result}
+</div>
 
-
-<!--<main role="main" class="container">-->
-<!--<div class="jumbotron">-->
-<!--<h1>Navbar example</h1>-->
-<!--<p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>-->
-<!--<a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>-->
-<!--</div>-->
-<!--</main>-->
 
 
 </body>
