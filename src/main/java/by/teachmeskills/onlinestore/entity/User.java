@@ -8,35 +8,24 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id_users")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "login", unique = true)
-    private String login;
+    @Column(name = "name", unique = true)
+    private String name;
 
-    @Column (name = "password")
+    @Column(name = "password")
     private String password;
-
-    @Column (name = "id_profile")
-    private int idProfile;
-
 
     public User() {
     }
 
-    public User(String login, String password) {
-        this.login = login;
+    public User(String name, String password) {
+        this.name = name;
         this.password = password;
     }
 
-    public User(String login, String password, int idProfile) {
-        this.login = login;
-        this.password = password;
-        this.idProfile = idProfile;
-    }
-
-    //getters and setters
     public int getId() {
         return id;
     }
@@ -45,12 +34,12 @@ public class User {
         this.id = id;
     }
 
-    public String getLogin() {
-        return login;
+    public String getName() {
+        return name;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -61,11 +50,65 @@ public class User {
         this.password = password;
     }
 
-    public int getIdProfile() {
-        return idProfile;
-    }
-
-    public void setIdProfile(int idProfile) {
-        this.idProfile = idProfile;
-    }
+    //    @Id
+//    @Column(name = "id")
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private int id;
+//
+//    @Column(name = "login", unique = true)
+//    private String login;
+//
+//    @Column (name = "password")
+//    private String password;
+//
+//    @Column (name = "id_profile")
+//    private int idProfile;
+//
+//
+//    public User() {
+//    }
+//
+//    public User(String login, String password) {
+//        this.login = login;
+//        this.password = password;
+//    }
+//
+//    public User(String login, String password, int idProfile) {
+//        this.login = login;
+//        this.password = password;
+//        this.idProfile = idProfile;
+//    }
+//
+//    //getters and setters
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
+//
+//    public String getLogin() {
+//        return login;
+//    }
+//
+//    public void setLogin(String login) {
+//        this.login = login;
+//    }
+//
+//    public String getPassword() {
+//        return password;
+//    }
+//
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
+//
+//    public int getIdProfile() {
+//        return idProfile;
+//    }
+//
+//    public void setIdProfile(int idProfile) {
+//        this.idProfile = idProfile;
+//    }
 }
