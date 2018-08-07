@@ -2,7 +2,6 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-
 <%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>--%>
 <%--<%@ taglib prefix="springForm" uri="http://www.springframework.org/tags/form" %>--%>
 <%--<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>--%>
@@ -30,16 +29,16 @@
 
 <%--@elvariable id="user" type="by.teachmeskills.onlinestore.entity.User"--%>
 <form:form modelAttribute="user" action="/authorization" method="post">
-    <form:input path="name" type="text" placeholder="name"/>
+    <form:input path="login" type="text" placeholder="login"/>
     <form:input path="password" type="password" placeholder="password"/>
-    <input type="submit" value="save"/>
+    <input type="submit" value="Log in"/>
 </form:form>
 
-<form action="/getUserByName" method="post">
-    <input  name="name" type="text" placeholder="name"/>
-    <input type="submit" value="find/?????"/>
-</form>
-
+<div>
+    <button><a href="/registration"/> Registration </button>
+    <%--<a href="registration.jsp"/>--%>
+<%--<input type="submit"  value="Registration"/>--%>
+</div>
 <div>${result}</div>
 
 

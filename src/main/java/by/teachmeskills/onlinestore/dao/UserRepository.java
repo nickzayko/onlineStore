@@ -13,7 +13,7 @@ import org.springframework.data.repository.core.CrudMethods;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.repository.query.RepositoryQuery;
 import org.springframework.stereotype.Repository;
-import sun.reflect.generics.repository.GenericDeclRepository;
+
 
 
 @Repository
@@ -25,7 +25,7 @@ public interface UserRepository extends CrudRepository <User, Integer> {
 //          * @param name
 //          * @return
 //          */
-    @Query("select user from User user where user.name = :name")
-    User getUserByName(@Param("name") String name);
+//    @Query("select user from User user where user.name = :name")
+//    User getUserByName(@Param("name") String name);
 
 }

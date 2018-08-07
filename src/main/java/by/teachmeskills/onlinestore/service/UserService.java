@@ -13,16 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserService  {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
-
-    public void save(User user) {
+    public void saveUser(User user) {
         userRepository.save(user);
     }
-
-    public User getUserByName(String name){
-        return userRepository.getUserByName(name);
-    }
-
-
 }

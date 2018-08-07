@@ -20,16 +20,16 @@ public class AuthorizationController {
     @RequestMapping(value = "/authorization", method = RequestMethod.POST)
     public String authorization(Model model,
                                 @ModelAttribute("user") User user) {
-        if (user.getName().trim().length() == 0 && user.getPassword().isEmpty()) {
-            model.addAttribute("result", "User is empty!");
-            model.addAttribute("user", new User());
-        } else {
-
-            service.save(user);
-
-            model.addAttribute("result", "user saved");
-            model.addAttribute("user", new User());
-        }
+//        if (user.getName().trim().length() == 0 && user.getPassword().isEmpty()) {
+//            model.addAttribute("result", "User is empty!");
+//            model.addAttribute("user", new User());
+//        } else {
+//
+//            service.save(user);
+//
+//            model.addAttribute("result", "user saved");
+//            model.addAttribute("user", new User());
+//        }
 
         return "index";
     }
@@ -37,15 +37,15 @@ public class AuthorizationController {
     @RequestMapping(value = "/getUserByName", method = RequestMethod.POST)
     public String getUserByName(Model model,
                                 @RequestParam("name") String name) {
-        if (name.trim().length() == 0 && name.isEmpty()) {
-            model.addAttribute("result", "Name is empty!");
-            model.addAttribute("user", new User());
-        } else {
-
-            User user = service.getUserByName(name);
-            model.addAttribute("result", user.getPassword());
-            model.addAttribute("user", new User());
-        }
+//        if (name.trim().length() == 0 && name.isEmpty()) {
+//            model.addAttribute("result", "Name is empty!");
+//            model.addAttribute("user", new User());
+//        } else {
+//
+//            User user = service.getUserByName(name);
+//            model.addAttribute("result", user.getPassword());
+//            model.addAttribute("user", new User());
+//        }
 
         return "index";
     }
