@@ -39,6 +39,8 @@
     <%--<a href="registration.jsp"/>--%>
 <%--<input type="submit"  value="Registration"/>--%>
 </div>
+
+
 <div>${result}</div>
 
 

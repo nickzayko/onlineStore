@@ -18,4 +18,9 @@ public class UserService  {
     public void saveUser(User user) {
         userRepository.save(user);
     }
+
+    public int getIdUser(int idProfile) {
+        int id = userRepository.getIdUser(idProfile);
+        return id;
+    }
 }
