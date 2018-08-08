@@ -21,4 +21,12 @@ public class ProfileService {
         int id = profileRepository.getIdProfile(idAddress);
         return id;
     }
+
+    public String isEmailExist(String emailUserDTO) {
+        return profileRepository.isEmailExist(emailUserDTO);
+    }
+
+    public String isTelephoneExist(String telephoneNumberUserDTO) {
+        return profileRepository.isTelephoneExist(telephoneNumberUserDTO);
+    }
 }

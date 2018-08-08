@@ -41,9 +41,27 @@ public class RegistrationValidator implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "streetUserDTO", "Error street");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "buildNumberUserDTO", "Error buildNumber");
 
-//        if (!errors.hasFieldErrors("loginUserDTO")){
-//            if (userService.)
-//        }
+        if (!errors.hasFieldErrors("loginUserDTO")){
+            if (userService.isLoginExist(userDTO.getLoginUserDTO()) != null ){
+                errors.rejectValue("loginUserDTO", "loginExist");
+            }
+        }
+
+        if (!errors.hasFieldErrors("emailUserDTO")){
+            if (profileService.isEmailExist(userDTO.getEmailUserDTO()) != null ){
+                errors.rejectValue("emailUserDTO", "emailExist");
+            }
+        }
+
+        if (!errors.hasFieldErrors("telephoneNumberUserDTO")){
+            if (profileService.isTelephoneExist(userDTO.getEmailUserDTO()) != null ){
+                errors.rejectValue("telephoneNumberUserDTO", "telephoneExist");
+            }
+        }
+
+
+
+
 
     }
 }

@@ -23,4 +23,10 @@ public class UserService  {
         int id = userRepository.getIdUser(idProfile);
         return id;
     }
+
+    public String isLoginExist(String loginUserDTO) {
+        return userRepository.isLoginExist(loginUserDTO);
+    }
+
+
 }
