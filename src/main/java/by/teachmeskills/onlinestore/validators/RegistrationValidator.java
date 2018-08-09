@@ -54,7 +54,7 @@ public class RegistrationValidator implements Validator {
         }
 
         if (!errors.hasFieldErrors("telephoneNumberUserDTO")){
-            if (profileService.isTelephoneExist(userDTO.getEmailUserDTO()) != null ){
+            if (profileService.isTelephoneExist(userDTO.getTelephoneNumberUserDTO()) != null ){
                 errors.rejectValue("telephoneNumberUserDTO", "telephoneExist");
             }
         }

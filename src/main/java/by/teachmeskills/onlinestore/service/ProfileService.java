@@ -26,7 +26,7 @@ public class ProfileService {
         return profileRepository.isEmailExist(emailUserDTO);
     }
 
-    public String isTelephoneExist(String telephoneNumberUserDTO) {
+    public Integer isTelephoneExist(int telephoneNumberUserDTO) {
         return profileRepository.isTelephoneExist(telephoneNumberUserDTO);
     }
 }

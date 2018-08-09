@@ -11,12 +11,12 @@ public interface ProfileRepository extends CrudRepository<Profile, Integer> {
 
 
     @Query("select id from Profile profiles where profiles.idAddress = :idAddress")
-    int getIdProfile(@Param("idAddress") int idAddress);
+    Integer getIdProfile(@Param("idAddress") int idAddress);
 
     @Query ("select email from Profile profile where profile.email = :emailUserDTO")
-    String isEmailExist(@Param("loginUserDTO") String emailUserDTO);
+    String isEmailExist(@Param("emailUserDTO") String emailUserDTO);
 
-    @Query ("select telephone_number from Profile profile where profile.telephoneNumber = :telephoneNumberUserDTO")
-    String isTelephoneExist(@Param("telephoneNumberUserDTO") String telephoneNumberUserDTO);
+    @Query ("select telephoneNumber from Profile profile where profile.telephoneNumber = :telephoneNumberUserDTO")
+    Integer isTelephoneExist(@Param("telephoneNumberUserDTO") Integer telephoneNumberUserDTO);
 
 }

@@ -24,9 +24,17 @@ public class UserService  {
         return id;
     }
 
+    public int getIdUser(User user) {
+        int id = userRepository.getIdUser(user.getLogin(), user.getPassword());
+        return id;
+    }
+
     public String isLoginExist(String loginUserDTO) {
         return userRepository.isLoginExist(loginUserDTO);
     }
 
 
+    public String isPasswordCorrect(String password) {
+        return userRepository.isPasswordCorrect(password);
+    }
 }

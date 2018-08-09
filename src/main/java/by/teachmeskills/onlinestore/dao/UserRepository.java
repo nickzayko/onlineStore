@@ -28,8 +28,14 @@ public interface UserRepository extends CrudRepository <User, Integer> {
     @Query("select id from User user where user.idProfile = :idProfile")
     int getIdUser(@Param("idProfile") int idProfile);
 
+    @Query("select id from User user where user.login = :login and user.password = :password")
+    int getIdUser(@Param("login") String login,
+                  @Param("password") String password);
+
     @Query ("select login from User user where user.login = :loginUserDTO")
     String isLoginExist(@Param("loginUserDTO") String loginUserDTO);
 
+    @Query ("select password from User user where user.password = :password")
+    String isPasswordCorrect(@Param("password") String password);
 
 }

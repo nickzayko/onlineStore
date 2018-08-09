@@ -30,7 +30,11 @@
 <%--@elvariable id="user" type="by.teachmeskills.onlinestore.entity.User"--%>
 <form:form modelAttribute="user" action="/authorization" method="post">
     <form:input path="login" type="text" placeholder="login"/>
+    <form:errors path="login"/>
+
     <form:input path="password" type="password" placeholder="password"/>
+    <form:errors path="password"/>
+
     <input type="submit" value="Log in"/>
 </form:form>
 
@@ -42,9 +46,6 @@
 
 
 <div>${result}</div>
-
-
-
 <%--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">--%>
     <%--<!--<a class="navbar-brand" href="#">Online-</a>-->--%>
     <%--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"--%>
@@ -81,12 +82,6 @@
         <%--</div>--%>
     <%--</div>--%>
 <%--</nav>--%>
-
-
-
 <%--</div>--%>
-
-
-
 </body>
 </html>
